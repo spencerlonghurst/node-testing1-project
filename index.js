@@ -42,7 +42,7 @@ function findLargestInteger(integers) {
   for (let index = 0; index < integers.length; index++) {
     if (integers[index].integer > result) {
       result = integers[index].integer
-    }    
+    }
   }
   return result
 }
@@ -54,6 +54,7 @@ class Counter {
    */
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
+    this.count = initialNumber;
   }
 
   /**
@@ -69,9 +70,14 @@ class Counter {
    * counter.countDown() // returns 0
    */
   countDown() {
-    // ✨ implement
+    if (this.count > 0) {
+      return this.count--
+    } else {
+      return this.count
+    }
   }
 }
+
 
 class Seasons {
   /**
